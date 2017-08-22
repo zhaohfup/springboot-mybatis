@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+    <appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>/Users/bst/Downloads/openapi_data.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <FileNamePattern>rest-demo.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>%d{HH:mm:ss.SSS} - %msg %n</Pattern>
+        </encoder>
+    </appender>
+    <root level="INFO,ERROR">
+        <appender-ref ref="dailyRollingFileAppender" />
+    </root>
+    <logger name="druid.sql">
+        <level value="INFO"/>
+    </logger>
+    <logger name="druid.sql.ResultSet">
+        <level value="INFO"/>
+    </logger>
+</configuration>
