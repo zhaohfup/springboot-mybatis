@@ -9,6 +9,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
+
 @SpringBootApplication
 @EnableScheduling
 public class OpenapiApplication implements EmbeddedServletContainerCustomizer {
