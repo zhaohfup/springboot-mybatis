@@ -4,7 +4,7 @@
         "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 
 
-<mapper namespace="com.fabao.mapper.CaseBatchMapper">
+<mapper namespace="com.boot.mapper.CaseBatchMapper">
     <select id="getBatchCount" resultType="java.lang.Integer">
         SELECT
         COUNT(*)
